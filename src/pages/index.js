@@ -2,6 +2,7 @@ import Head from "next/head";
 import Nav from "src/parts/Nav";
 import Hero from "src/parts/Hero";
 import AboutMe from "src/parts/AboutMe";
+import Portfolio from "src/parts/Portfolio";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <main>
         <Hero />
         <AboutMe />
+        <Portfolio />
       </main>
     </div>
   );
