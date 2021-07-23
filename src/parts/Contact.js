@@ -14,7 +14,7 @@ config.autoAddCss = false; /* eslint-disable import/first */
 
 const Contact = () => {
   return (
-    <div className="bg-white">
+    <div id="contact" className="bg-white">
       <div className="py-24 container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-indigo-400 font-bold text-lg tracking-widest">
           CONTACT

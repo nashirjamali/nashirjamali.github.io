@@ -1,10 +1,21 @@
 import Link from "next/link";
-import IconInstagram from "public/images/icon-instagram.svg";
-import IconGithub from "public/images/icon-github.svg";
+import {
+  faGithub,
+  faInstagram,
+  faMedium,
+  faTelegram,
+  faWhatsapp,
+} from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// where the icons flash from a very large icon down to a properly sized one:
+import "@fortawesome/fontawesome-svg-core/styles.css";
+// Prevent fontawesome from adding its CSS since we did it manually above:
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false; /* eslint-disable import/first */
 
 const AboutMe = () => {
   return (
-    <div className="py-24 container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div id="aboutme" className="py-24 container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-indigo-400 font-bold text-lg tracking-widest">
         KNOW MYSELF
       </div>
@@ -26,20 +37,20 @@ const AboutMe = () => {
           <div className="flex mt-4">
             <div
               className="border-2 border-gray-900 rounded-sm w-10 h-10 flex flex-wrap justify-center content-center mr-4
-            hover:bg-blue-700 hover:border-blue-700 text-gray-900 hover:text-white
+              hover:bg-pink-600 hover:border-pink-600 text-gray-900 hover:text-white
             cursor-pointer"
             >
               <Link href="https://instagram.com/nashir_j">
-                <a className="font-semibold">Fb</a>
+                <FontAwesomeIcon className="fa-lg" icon={faInstagram} />
               </Link>
             </div>
             <div
               className="border-2 border-gray-900 rounded-sm w-10 h-10 flex flex-wrap justify-center content-center mr-4
-            hover:bg-pink-600 hover:border-pink-600 text-gray-900 hover:text-white
+            hover:bg-gray-500 hover:border-gray-500 text-gray-900 hover:text-white
             cursor-pointer"
             >
-              <Link href="https://www.facebook.com/nashir.jamali.18">
-                <a className="font-semibold">in</a>
+              <Link href="https://github.com/nashirjamali">
+                <FontAwesomeIcon className="fa-lg" icon={faGithub} />
               </Link>
             </div>
             <div
@@ -48,7 +59,7 @@ const AboutMe = () => {
             cursor-pointer"
             >
               <Link href="https://github.com/nashirjamali">
-                <a className="font-semibold">Gh</a>
+                <FontAwesomeIcon className="fa-lg" icon={faMedium} />
               </Link>
             </div>
           </div>
@@ -66,7 +77,9 @@ const AboutMe = () => {
         </div>
       </div>
       <div className="mt-16">
-        <h1 className="text-gray-900 font-semibold text-2xl mt-10">Expertise</h1>
+        <h1 className="text-gray-900 font-semibold text-2xl mt-10">
+          Expertise
+        </h1>
         <div className="grid grid-cols-6 mt-8">
           <div>
             <h5 className="text-gray-600 font-semibold">Frontend</h5>

@@ -4,7 +4,7 @@ import IconGithub from "public/images/icon-github.svg";
 
 const Portfolio = () => {
   return (
-    <div className="bg-gray-200">
+    <div id="portfolio" className="bg-gray-200">
       <div className="py-24 container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-indigo-400 font-bold text-lg tracking-widest">
           PORTFOLIO

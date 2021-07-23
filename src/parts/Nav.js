@@ -26,34 +26,32 @@ const Nav = () => {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center justify-between w-full">
               <div className="flex-shrink-0">
-                <img
-                  className="h-8 w-8"
-                  src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
-                  alt="Workflow"
-                />
+                <h1 className="text-white font-bold text-lg">
+                  Nashir <span className="text-orange-500">Jamali</span>
+                </h1>
               </div>
               <div className="hidden md:block">
                 <div className="ml-10 items-baseline justify-end flex space-x-10">
                   <a
-                    href="#"
+                    href="#aboutme"
                     className="text-gray-500 text-sm hover:text-white"
                   >
                     About
                   </a>
                   <a
-                    href="#"
-                    className="text-gray-500 text-sm hover:text-white"
-                  >
-                    Services / Jasa
-                  </a>
-                  <a
-                    href="#"
+                    href="#portfolio"
                     className="text-gray-500 text-sm hover:text-white"
                   >
                     Portfolio
                   </a>
                   <a
-                    href="#"
+                    href="#services"
+                    className="text-gray-500 text-sm hover:text-white"
+                  >
+                    Services
+                  </a>
+                  <a
+                    href="#contact"
                     className="text-gray-500 text-sm hover:text-white"
                   >
                     Contact
