@@ -3,6 +3,7 @@ import Nav from "src/parts/Nav";
 import Hero from "src/parts/Hero";
 import AboutMe from "src/parts/AboutMe";
 import Portfolio from "src/parts/Portfolio";
+import Services from "src/parts/Services";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <Hero />
         <AboutMe />
         <Portfolio />
+        <Services />
       </main>
     </div>
   );
