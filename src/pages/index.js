@@ -4,6 +4,7 @@ import Hero from "src/parts/Hero";
 import AboutMe from "src/parts/AboutMe";
 import Portfolio from "src/parts/Portfolio";
 import Services from "src/parts/Services";
+import Contact from "src/parts/Contact";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <AboutMe />
         <Portfolio />
         <Services />
+        <Contact />
       </main>
     </div>
   );
