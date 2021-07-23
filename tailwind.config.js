@@ -486,7 +486,7 @@ module.exports = {
       8: "2rem",
       9: "2.25rem",
       10: "2.5rem",
-      11: "3rem"
+      11: "3rem",
     },
     listStyleType: {
       none: "none",
@@ -998,7 +998,7 @@ module.exports = {
     verticalAlign: ["responsive"],
     visibility: ["responsive"],
     whitespace: ["responsive"],
-    width: ["responsive"],
+    width: ["responsive", "hover", "focus"],
     wordBreak: ["responsive"],
     zIndex: ["responsive", "focus-within", "focus"],
   },
