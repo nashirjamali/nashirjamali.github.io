@@ -1,12 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Transition } from "@headlessui/react";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [atTopPage, setAtTopPage] = useState("bg-trans");
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+  });
+
+  const handleScroll = () => {
+    if (window.pageYOffset > 0) {
+      // user is scrolled
+      if (atTopPage) setAtTopPage(false);
+    } else {
+      // user is at top of page
+      if (atTopPage) setAtTopPage(true);
+    }
+  };
 
   return (
     <header className="sticky top-0 z-50">
-      <nav className="bg-gray-900">
+      <nav className={atTopPage ? "bg-transparent" : "bg-gray-900"}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center justify-between w-full">
@@ -19,16 +34,28 @@ const Nav = () => {
               </div>
               <div className="hidden md:block">
                 <div className="ml-10 items-baseline justify-end flex space-x-10">
-                  <a href="#" className="text-gray-500 text-sm hover:text-white">
+                  <a
+                    href="#"
+                    className="text-gray-500 text-sm hover:text-white"
+                  >
                     About
                   </a>
-                  <a href="#" className="text-gray-500 text-sm hover:text-white">
+                  <a
+                    href="#"
+                    className="text-gray-500 text-sm hover:text-white"
+                  >
                     Services / Jasa
                   </a>
-                  <a href="#" className="text-gray-500 text-sm hover:text-white">
+                  <a
+                    href="#"
+                    className="text-gray-500 text-sm hover:text-white"
+                  >
                     Portfolio
                   </a>
-                  <a href="#" className="text-gray-500 text-sm hover:text-white">
+                  <a
+                    href="#"
+                    className="text-gray-500 text-sm hover:text-white"
+                  >
                     Contact
                   </a>
                 </div>
